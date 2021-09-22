@@ -1,5 +1,18 @@
-body {
-  background-color: red;
-  font-size: larger;
+html, body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+}
+
+.header {
+  position: relative;
+  padding: 1rem;
+  z-index: 1000;
+  -webkit-box-shadow: 0 0 0  0.5rem rgb 0 0 0/25%;
+          box-shadow: 0 0 0  0.5rem rgb 0 0 0/25%;
 }
 /*# sourceMappingURL=main.css.map */
