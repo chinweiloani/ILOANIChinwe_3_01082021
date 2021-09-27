@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     font-family: "Roboto", sans-serif;
     scroll-behavior: smooth;
-    overflow: hidden;
+    counter-reset: counterList;
  
 }
 .header {
@@ -50,22 +50,159 @@ input {
     }
     &_subtitle {
         margin: 1.5rem 0;
-        font-weight: 300;
+        font-weight: 400;
+        color: #7e7e7e;
     }
 }
-.function {
-    padding: 2rem 1rem;
 
-    &_container{
-        width: auto;
-        margin: auto;
-        position: relative;
+.action {
+    padding: $itemPadding;
+    &_title {
+        margin-left: 1rem;
     }
-    &_steps{
+    &_steps {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &_step {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        position: relative;
+        border-radius: 1.25rem;
+        background-color: $color-body;
+        padding: 1.5rem;
+        margin: 1rem 0 1rem 0.75rem;
+        box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        &::before {
+            counter-increment: counterList;
+            content: counter(counterList);
+            background-color: $color-primary;
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            color: white;
+            position: absolute;
+            left: -0.75rem;
+        }  
+    }
+    &_icon {
+        margin-right: 1rem;
+        color: #7e7e7e;
 
+    }
+    &_text {
+        font-weight: 400;
+    }
+}
+
+.restaurants {
+    background-color:$color-body;
+    padding: 2rem 1rem;
+}
+.boards {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+.board {
+    background-color: white;
+    border-radius: 1rem;
+    position: relative;
+    color: inherit;
+    display: block;
+    &_img {
+        height: 12rem;
+        width: 100%;
+        border: transparent solid 0px;
+        border-radius: 1rem 1rem 0 0;
+        object-fit: cover;
+        box-shadow: none;
+    }
+    &_badge {
+        background-color: $color-tertiary;
+        color: darken($color-tertiary,50%);
+        padding: 0.5rem;
+        border-radius: 0.125rem;
+        position: absolute;
+        top: 1rem;
+        right: 0.75rem;
+    }
+    &_info {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 1rem;
+    }
+    &_content {
+        flex: 1;
+    }
+    &_title {
+        margin: 0;
+        margin-bottom: 0.25rem;
+    }
+    &_subtitle {
+        margin: 0;
+    }
+    &_btn {
+        height: 2rem;
+        width: 2rem;
+        background-color: transparent;
+        border: transparent 0px solid;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &_like {
+        background-color: white;
     }
 
 }
+.footer {
+    background-color: $footer-background;
+
+    &_container {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 1.5rem;
+    }
+    &_logo {
+        color: white;
+        font-family: "shrikhand", "cursive";
+        margin: 0;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    &_items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+    }
+    &_itemsE {
+        margin: 0.5rem 0;
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &_link {
+            color: white;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &_icon {
+        width: 1.2rem;
+        margin-right: 0.5rem;
+    }
+
+}
+
+
