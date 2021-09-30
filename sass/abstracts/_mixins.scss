@@ -1,0 +1,18 @@
+@mixin flexCentre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+@mixin flexAround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin ellipsis {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+}

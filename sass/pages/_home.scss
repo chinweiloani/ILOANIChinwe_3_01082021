@@ -4,8 +4,6 @@ html, body {
     margin: 0;
     font-family: "Roboto", sans-serif;
     scroll-behavior: smooth;
-    counter-reset: counterList;
- 
 }
 .header {
     display: flex;
@@ -14,12 +12,15 @@ html, body {
     position: relative;
     box-shadow: 0 0 0 0.1rem rgb(0, 0, 0, 0.25);
     z-index: 1000;
+
+    &__logo {
+    height: 60px;
+    width: 200px;
+    padding-top: 0.7rem;
+   }
+
 }
-.header_logo {
-    height: 50px;
-    width: 150px;
-    padding-top: 0.5rem;  
-}
+
 .location {
     height: 50px;
     display: flex;
@@ -30,7 +31,7 @@ html, body {
 }
 .local {
     
-    &_icon {
+    &__icon {
         margin-right: 0.5rem;
         
     }
@@ -38,17 +39,18 @@ html, body {
 input {
     border: none;
     background-color: transparent;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 .info {
     padding: 2rem;
     background-color: $color-body;
     text-align: center;
+    padding-bottom: 4rem;
 
-    &_title {
+    &__title {
         margin: 0 1rem;
     }
-    &_subtitle {
+    &__subtitle {
         margin: 1.5rem 0;
         font-weight: 400;
         color: #7e7e7e;
@@ -56,64 +58,65 @@ input {
 }
 
 .action {
-    padding: $itemPadding;
-    &_title {
-        margin-left: 1rem;
-    }
-    &_steps {
+    padding: 2rem 1rem 3rem 1rem;
+
+    &__steps {
         margin: 0;
         padding: 0;
-        list-style: none;
+
     }
-    &_step {
-        display: flex;
+
+    &__step {
         position: relative;
-        border-radius: 1.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: $color-body;
-        padding: 1.5rem;
-        margin: 1rem 0 1rem 0.75rem;
+        border-radius: 1.5rem;
+        margin: 1rem 0 1.2rem 0.75rem;
+        padding: 1rem;
         box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-        &::before {
-            counter-increment: counterList;
-            content: counter(counterList);
-            background-color: $color-primary;
-            height: 1.5rem;
-            width: 1.5rem;
-            border-radius: 100px;
-            display: flex;
-            justify-content: center;
-            color: white;
-            position: absolute;
-            left: -0.75rem;
-        }  
     }
-    &_icon {
+    &__number {
+        background-color: $color-primary;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -7rem;
+        color: white;
+    }
+    
+    &__icon {
         margin-right: 1rem;
+        margin-left: 1rem;
         color: #7e7e7e;
 
     }
-    &_text {
-        font-weight: 400;
-    }
+    
 }
 
 .restaurants {
     background-color:$color-body;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 4rem 1rem;
+    
 }
 .boards {
     display: grid;
     grid-template-columns: repeat(1,1fr);
     column-gap: 2rem;
-    row-gap: 2rem;
+    row-gap: 1.3rem;
 }
 .board {
+    display: block;
     background-color: white;
     border-radius: 1rem;
     position: relative;
     color: inherit;
-    display: block;
-    &_img {
+    
+    &__img {
         height: 12rem;
         width: 100%;
         border: transparent solid 0px;
@@ -121,32 +124,34 @@ input {
         object-fit: cover;
         box-shadow: none;
     }
-    &_badge {
+    &__badge {
+        position: absolute;
+        top: 1rem;
+        right: 0.75rem;
         background-color: $color-tertiary;
         color: darken($color-tertiary,50%);
         padding: 0.5rem;
         border-radius: 0.125rem;
-        position: absolute;
-        top: 1rem;
-        right: 0.75rem;
+
+        
     }
-    &_info {
+    &__info {
         display: flex;
         align-items: center;
         position: relative;
         padding: 1rem;
     }
-    &_content {
+    &__content {
         flex: 1;
     }
-    &_title {
+    &__title {
         margin: 0;
         margin-bottom: 0.25rem;
     }
-    &_subtitle {
+    &__subtitle {
         margin: 0;
     }
-    &_btn {
+    &__btn {
         height: 2rem;
         width: 2rem;
         background-color: transparent;
@@ -156,41 +161,46 @@ input {
         align-items: center;
         justify-content: center;
     }
-    &_like {
+    &__like {
         background-color: white;
     }
-
 }
+
 .footer {
     background-color: $footer-background;
 
-    &_container {
+    &__container {
         display: flex;
         flex-direction: column;
         padding: 1.5rem 1.5rem;
     }
-    &_logo {
+    &__logo {
         color: white;
         font-family: "shrikhand", "cursive";
         margin: 0;
         font-size: 1.2rem;
         margin-bottom: 1rem;
     }
-    &_items {
+    &__items {
         list-style: none;
         margin: 0;
         padding: 0;
+        ::before {
+            content: icon;
+            color: white;
+        }
         
     }
-    &_itemsE {
+    &__itemsE {
         margin: 0.5rem 0;
+        
         &:first-child {
             margin-top: 0;
         }
         &:last-child {
             margin-bottom: 0;
         }
-        &_link {
+        &__link {
             color: white;
             text-decoration: none;
             &:hover {
@@ -198,11 +208,12 @@ input {
             }
         }
     }
-    &_icon {
+    &__icon {
         width: 1.2rem;
         margin-right: 0.5rem;
     }
-
+    &__text {
+        color: white;
+    }
+    
 }
-
-
