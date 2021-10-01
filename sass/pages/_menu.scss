@@ -7,9 +7,7 @@ html, body {
  
 }
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCentre;
     position: relative;
 
     &__logo {
@@ -26,9 +24,7 @@ html, body {
     height: 2rem;
     width: 2rem;
     top: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCentre;
     transform: translateY(-50%);
     font-size: 1.2rem;
     color: black;
@@ -63,9 +59,7 @@ html, body {
         background-color: transparent;
         border: transparent 0px solid;
         padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexCentre;
         cursor: pointer;
         position: relative;
         /* background-color:black; */
@@ -150,24 +144,20 @@ html, body {
     
 
     &__header {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    flex: 1;
+        flex: 1;
+    @include ellipsis;
+    
     }
 
     &__title {
     margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    @include ellipsis;
     }
 
     &__content {
     margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    @include ellipsis;
+    
     }
 
     &__price {
@@ -182,9 +172,7 @@ html, body {
     background-color: $color-tertiary;
     margin: -1rem -5rem -1rem 1rem;
     width: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCentre;
     transition-duration: 0.5s;
     }
 
@@ -196,9 +184,7 @@ html, body {
     height: 1.6rem;
     width: 1.6rem;
     background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCentre;
     border-radius: 2rem;
     transform: rotate(360deg);
     transition-duration: 0.5s;

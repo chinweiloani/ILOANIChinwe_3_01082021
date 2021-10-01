@@ -4,13 +4,12 @@ html, body {
     margin: 0;
     font-family: "Roboto", sans-serif;
     scroll-behavior: smooth;
+    counter-increment: counterList;
 }
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCentre;
     position: relative;
-    box-shadow: 0 0 0 0.1rem rgb(0, 0, 0, 0.25);
+    box-shadow: 0 0  0.5rem rgb(0, 0, 0, 0.25);
     z-index: 1000;
 
     &__logo {
@@ -23,9 +22,7 @@ html, body {
 
 .location {
     height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    @include flexAround;
     background-color: $color-local;
     position: relative;
 }
@@ -58,43 +55,55 @@ input {
 }
 
 .action {
-    padding: 2rem 1rem 3rem 1rem;
+    padding: 2rem 0 3rem 1rem;
+   
 
     &__steps {
         margin: 0;
         padding: 0;
-
+        display: inline-block;
+        width: 100%;
+        
     }
-
     &__step {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color: $color-body;
         border-radius: 1.5rem;
-        margin: 1rem 0 1.2rem 0.75rem;
         padding: 1rem;
+        margin: 1rem;
         box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            background-color:#eae2f5;
+            
+        }   
+        
     }
     &__number {
+        position: absolute;
         background-color: $color-primary;
         height: 1.5rem;
         width: 1.5rem;
         border-radius: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: -7rem;
+        @include flexCentre;
         color: white;
-    }
+        margin-left: -1.5rem;
+        
+
+    } 
     
     &__icon {
         margin-right: 1rem;
         margin-left: 1rem;
         color: #7e7e7e;
+        &:hover {
+            color: $color-primary;
+        }
 
     }
+    
     
 }
 
@@ -114,7 +123,7 @@ input {
     background-color: white;
     border-radius: 1rem;
     position: relative;
-    color: inherit;
+    color: inherit; 
     
     &__img {
         height: 12rem;
@@ -122,45 +131,50 @@ input {
         border: transparent solid 0px;
         border-radius: 1rem 1rem 0 0;
         object-fit: cover;
-        box-shadow: none;
+        
     }
+
     &__badge {
         position: absolute;
         top: 1rem;
-        right: 0.75rem;
+        right: 0.75rem; 
         background-color: $color-tertiary;
         color: darken($color-tertiary,50%);
         padding: 0.5rem;
-        border-radius: 0.125rem;
-
+        border-radius: 0.25rem;
         
     }
+
     &__info {
         display: flex;
         align-items: center;
         position: relative;
         padding: 1rem;
     }
+
     &__content {
         flex: 1;
     }
+
     &__title {
         margin: 0;
         margin-bottom: 0.25rem;
     }
+
     &__subtitle {
         margin: 0;
     }
+
     &__btn {
         height: 2rem;
         width: 2rem;
         background-color: transparent;
         border: transparent 0px solid;
         padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexCentre;
+        
     }
+
     &__like {
         background-color: white;
     }
@@ -173,7 +187,9 @@ input {
         display: flex;
         flex-direction: column;
         padding: 1.5rem 1.5rem;
+
     }
+
     &__logo {
         color: white;
         font-family: "shrikhand", "cursive";
@@ -181,39 +197,36 @@ input {
         font-size: 1.2rem;
         margin-bottom: 1rem;
     }
+
     &__items {
-        list-style: none;
         margin: 0;
         padding: 0;
-        ::before {
-            content: icon;
-            color: white;
-        }
         
     }
-    &__itemsE {
-        margin: 0.5rem 0;
-        
-        &:first-child {
-            margin-top: 0;
-        }
-        &:last-child {
-            margin-bottom: 0;
-        }
-        &__link {
-            color: white;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+    &__item {
+        margin-top: 0.5rem;
     }
     &__icon {
         width: 1.2rem;
         margin-right: 0.5rem;
+        color: white;
     }
+
     &__text {
         color: white;
     }
+
+    &__link {
+        color: white;
+        
+        & a :hover {
+            color: white;
+            background-color: transparent;
+            text-decoration: underline;
+           
+        }
+    }
+
+   
     
 }

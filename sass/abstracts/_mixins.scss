@@ -9,10 +9,15 @@
     justify-content: space-around;
     align-items: center;
 }
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
 @mixin ellipsis {
-    margin: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    
-}
+
+  }  
