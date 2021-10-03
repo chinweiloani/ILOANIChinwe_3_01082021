@@ -44,6 +44,10 @@ html, body {
     background-color: $color-body;
     z-index: 1;
     position: relative;
+    @include tablet {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
     &__head {
         padding: 1rem 2rem 0 1rem;
         display: flex;
@@ -56,27 +60,33 @@ html, body {
     &__btn {
         height: 2rem;
         width: 2rem;
-        background-color: transparent;
-        border: transparent 0px solid;
+        border: 0 solid transparent;
         padding: 0;
         @include flexCentre;
         cursor: pointer;
         position: relative;
-        /* background-color:black; */
+        /* background-color:black;  */
+
         &:hover::before {
             opacity: 1;
         }
+
         &::before {
             content:"";
             opacity: 0;
-            transition: 0.5s;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+            transition-delay: 0s;
             position: absolute;
             top: 0;
             left: 0;
+            height: 100%;
             width: 100%;
             background: linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
-        }
-        /* &_like {
+        } 
+
+        &_like {
             transition-duration: .25s;
             background-color: #f6f6f6;
             position: absolute;
@@ -88,14 +98,14 @@ html, body {
             align-items: center;
             justify-content: center;
             mix-blend-mode: lighten;
-        } */
-        /* &_btn:hover {
+        } 
+        &_btn:hover {
             .menu_like {
                 &--noBg {
                     opacity: 0;
                 }
             }
-        } */
+        } 
 
 
     }
@@ -104,16 +114,20 @@ html, body {
 }
 .menuContents {
     display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    
 }
 .menuContent {
     max-width: 100%;
     overflow: hidden;
     padding: 0 1rem;
+    
 
     &__title {
     position: relative;
     padding-bottom: 0.5rem;
     font-weight: normal;
+
     &::after {
         content: "";
         width: 3rem;
@@ -130,19 +144,18 @@ html, body {
 .menuBox {
     background-color: white;
     padding: 1rem;
+    max-width: 100%;
     display: flex;
     border-radius: 0.75rem;
     margin: 1rem 0;
     box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
-    max-width: 100%;
-    /* animation: itemAppear .6s;
-    animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
-    animation-fill-mode: both;
-    transform: scale(0); */
+    @include tablet {
+        
+    }
+   
     
-
     &__header {
         flex: 1;
     @include ellipsis;
@@ -180,6 +193,10 @@ html, body {
         margin-right: -1rem;
     }
 
+    &__icon {
+        color: $color-tertiary;
+    }
+
    &__iconwrap {
     height: 1.6rem;
     width: 1.6rem;
@@ -190,17 +207,63 @@ html, body {
     transition-duration: 0.5s;
    }
    &:hover &__iconwrap {
-       transform: rotate(0);
+    transform: rotate(0);
    }
+   
+}
 
-   &__icon {
-       color: $color-tertiary;
-   }
+.delay-0 {
+    @include boxAnime;
+    animation-delay: 0s;
+}
+.delay-1 {
+   @include boxAnime;
+   animation-delay: 1s;
 
 }
+.delay-2 {
+    @include boxAnime;
+    animation-delay: 2s;
+
+}
+.delay-3 {
+    @include boxAnime;
+    animation-delay: 3s;
+
+}
+.delay-4 {
+    @include boxAnime;
+    animation-delay: 4s;
+
+}
+.delay-5 {
+    @include boxAnime;
+    animation-delay: 5s;
+
+}
+.delay-6 {
+    
+    @include boxAnime;
+    animation-delay: 6s;
+
+}
+.delay-7 {
+    @include boxAnime;
+    animation-delay: 7s;
+
+}
+.delay-8 {
+    @include boxAnime;
+    animation-delay: 8s;
+
+}
+.delay-9 {
+    @include boxAnime;
+    animation-delay: 9s;
+}
+    
 .btnwrap {
     display: flex;
-    text-decoration: none;
     justify-content: center;
     padding: 3rem 0;
 
