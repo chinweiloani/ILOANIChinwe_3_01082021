@@ -85,8 +85,8 @@ html, body {
   animation-fill-mode: both;
   z-index: 10000;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .loader__itemContainer {
   display: flex;
@@ -94,9 +94,9 @@ html, body {
   justify-content: space-between;
 }
 .loader__item {
-  height: 1rem;
-  width: 1rem;
-  border-radius: 1rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 2rem;
   animation-name: jump;
   animation-duration: 1s;
   animation-timing-function: ease;
@@ -145,7 +145,7 @@ html, body {
   position: relative;
 }
 
-.local__icon {
+.locationIcon {
   margin-right: 0.5rem;
 }
 
@@ -236,33 +236,33 @@ input {
   padding: 2rem 1rem 4rem 1rem;
 }
 
-.boards {
+.courses {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   column-gap: 2rem;
   row-gap: 1.3rem;
 }
 @media all and (min-width: 768px) {
-  .boards {
+  .courses {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.board {
+.course {
   display: block;
   background-color: white;
   border-radius: 1rem;
   position: relative;
   color: inherit;
 }
-.board__img {
+.course__img {
   height: 12rem;
   width: 100%;
   border: transparent solid 0px;
   border-radius: 1rem 1rem 0 0;
   object-fit: cover;
 }
-.board__badge {
+.course__badge {
   position: absolute;
   top: 1rem;
   right: 0.75rem;
@@ -271,23 +271,23 @@ input {
   padding: 0.5rem;
   border-radius: 0.25rem;
 }
-.board__info {
+.course__info {
   display: flex;
   align-items: center;
   position: relative;
   padding: 1rem;
 }
-.board__content {
+.course__content {
   flex: 1;
 }
-.board__title {
+.course__title {
   margin: 0;
   margin-bottom: 0.25rem;
 }
-.board__subtitle {
+.course__subtitle {
   margin: 0;
 }
-.board__btn {
+.course__btn {
   height: 2rem;
   width: 2rem;
   background-color: transparent;
@@ -297,8 +297,8 @@ input {
   justify-content: center;
   align-items: center;
 }
-.board__like {
-  background-color: white;
+.course__like {
+  background-color: white !important;
 }
 
 .footer {
@@ -402,12 +402,6 @@ html, body {
   z-index: 1;
   position: relative;
 }
-@media all and (min-width: 768px) {
-  .menu {
-    margin-right: 1rem;
-    margin-left: 1rem;
-  }
-}
 .menu__head {
   padding: 1rem 2rem 0 1rem;
   display: flex;
@@ -420,14 +414,15 @@ html, body {
 .menu__btn {
   height: 2rem;
   width: 2rem;
-  border: 0 solid transparent;
+  background-color: transparent;
+  border: transparent 0px;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   position: relative;
-  /* background-color:black;  */
+  /*  background-color:black; */
 }
 .menu__btn:hover::before {
   opacity: 1;
@@ -447,7 +442,7 @@ html, body {
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 .menu__btn_like {
-  transition-duration: 0.25s;
+  /* transition-duration: .25s;
   background-color: #f6f6f6;
   position: absolute;
   top: 0;
@@ -457,15 +452,21 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  mix-blend-mode: lighten;
+  mix-blend-mode: lighten; */
 }
-.menu__btn_btn:hover .menu_like--noBg {
+.menu__btn_btn:hover .menu_like--Bg {
   opacity: 0;
 }
 
 .menuContents {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+}
+@media all and (min-width: 768px) {
+  .menuContents {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
 }
 
 .menuContent {

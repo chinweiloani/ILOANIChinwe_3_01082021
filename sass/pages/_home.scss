@@ -18,9 +18,7 @@ html, body {
     animation-delay: 1.75s;
     animation-fill-mode: both;
     z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCentre;
 
     &__itemContainer {
         display: flex;
@@ -29,9 +27,9 @@ html, body {
     }
 
     &__item {
-        height: 1rem;
-        width: 1rem;
-        border-radius: 1rem;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 2rem; 
         animation-name: jump;
         animation-duration: 1s;
         animation-timing-function: ease;
@@ -81,13 +79,11 @@ html, body {
     background-color: $color-local;
     position: relative;
 }
-.local {
-    
-    &__icon {
-        margin-right: 0.5rem;
+.locationIcon{
+    margin-right: 0.5rem;
         
-    }
 }
+
 input {
     border: none;
     background-color: transparent;
@@ -177,7 +173,7 @@ input {
     padding: 2rem 1rem 4rem 1rem;
     
 }
-.boards {
+.courses {
     display: grid;
     grid-template-columns: repeat(1,1fr);
     column-gap: 2rem;
@@ -187,7 +183,7 @@ input {
         
     }
 }
-.board {
+.course {
     display: block;
     background-color: white;
     border-radius: 1rem;
@@ -245,8 +241,10 @@ input {
     }
 
     &__like {
-        background-color: white;
+        
+        background-color: white!important;
     }
+    
 }
 
 .footer {
