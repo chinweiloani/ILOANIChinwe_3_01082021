@@ -229,22 +229,7 @@ input {
     &__subtitle {
         margin: 0;
     }
-
-    &__btn {
-        height: 2rem;
-        width: 2rem;
-        background-color: transparent;
-        border: transparent 0px solid;
-        padding: 0;
-        @include flexCentre;
-        
-    }
-
-    &__like {
-        
-        background-color: white!important;
-    }
-    
+  
 }
 
 .footer {
