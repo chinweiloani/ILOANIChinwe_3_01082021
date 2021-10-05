@@ -46,8 +46,8 @@ html, body {
     z-index: 1;
     position: relative;
     @include tablet {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
     }
     
     &__head {
@@ -55,9 +55,11 @@ html, body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
     }
     &__type {
         font-family: "shrikhand", "cursive";
+        
     }
     &__btn {
         height: 2rem;
