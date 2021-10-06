@@ -391,8 +391,8 @@ html, body {
 }
 @media all and (min-width: 768px) {
   .menu {
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 .menu__head {
@@ -438,10 +438,11 @@ html, body {
 .menuContents {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  /* @include tablet {
-  grid-template-columns: repeat(3,1fr);
-
-  }  */
+}
+@media all and (min-width: 768px) {
+  .menuContents {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .menuContent {
