@@ -64,20 +64,26 @@ html, body {
     &__btn {
         height: 2rem;
         width: 2rem;
-        background-color: transparent;
-        border: transparent 0px;
+        /* background-color: transparent; */
+        /* border: transparent 0px; */
         padding: 0;
-        @include flexCentre;
+        /* @include flexCentre; */
         cursor: pointer;
-        position: relative;
-       /*  background-color:black; */
+        text-transform: none;
+        color: $color-primary;
 
-        &:hover::before {
+       /*  &:hover::before {
             opacity: 1;
-        }
+        } */
 
-        &::before {
-            content:"";
+        &:hover {
+            font-weight: bolder;
+            background-color: linear-gradient (to top, $color-secondary, $color-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: animbutton 2s forwards;
+            /*content:"";
             opacity: 0;
             transition-property: all;
             transition-duration: 0.5s;
@@ -88,7 +94,7 @@ html, body {
             left: 0;
             height: 100%;
             width: 100%;
-            background: linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+            background: linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);*/
         } 
 
     }

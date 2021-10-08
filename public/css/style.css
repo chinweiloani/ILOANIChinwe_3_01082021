@@ -28,6 +28,14 @@
     transform: scale(1);
   }
 }
+@keyframes animbutton {
+  from {
+    background-position-y: 32px;
+  }
+  to {
+    background-position-y: -32px;
+  }
+}
 h1 {
   font-family: "shrikhand", cursive;
   font-weight: normal;
@@ -79,7 +87,8 @@ html, body {
   width: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #f7f0f0;
+  /* background-color: rgba(255, 255, 255, 0.90); */
   animation: loader 0.01s;
   animation-delay: 1.75s;
   animation-fill-mode: both;
@@ -288,6 +297,28 @@ input {
   margin: 0;
 }
 
+.fa-heart {
+  /* height: 2rem;
+  width: 2rem; */
+  text-transform: none;
+  font-weight: normal;
+  /* background-color: transparent; */
+  /* border: transparent 0px; */
+  padding: 0;
+  /* @include flexCentre; */
+  cursor: pointer;
+  color: black;
+  font-size: 25px;
+}
+.fa-heart:hover {
+  font-weight: bolder;
+  background: linear-gradient to top, #FF79DA, #9356DC;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animbutton 2s forwards;
+}
+
 .footer {
   background-color: #353535;
 }
@@ -407,32 +438,36 @@ html, body {
 .menu__btn {
   height: 2rem;
   width: 2rem;
-  background-color: transparent;
-  border: transparent 0px;
+  /* background-color: transparent; */
+  /* border: transparent 0px; */
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* @include flexCentre; */
   cursor: pointer;
-  position: relative;
-  /*  background-color:black; */
+  text-transform: none;
+  color: #9356DC;
+  /*  &:hover::before {
+       opacity: 1;
+   } */
 }
-.menu__btn:hover::before {
-  opacity: 1;
-}
-.menu__btn::before {
-  content: "";
+.menu__btn:hover {
+  font-weight: bolder;
+  background-color: linear-gradient to top, #FF79DA, #9356DC;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animbutton 2s forwards;
+  /*content:"";
   opacity: 0;
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: ease;
-  transition-delay: 0s;
+  transition-delay: 0s; 
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);*/
 }
 
 .menuContents {
