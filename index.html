@@ -28,26 +28,24 @@
                 <div class="loader__item loader__item--4"></div>
             </div>
         </div>
-        <section>
 
-        </section>
         <!--Header-->
         <header class="header">
             <img src="./images/ohmyfood@2x.svg" class="header__logo" alt="ohmyfood logo">
         </header>
         <!--Section Location-->
         <main>
-            <section class="location">
+            <div class="location">
                 <span>
                     <i class="fas fa-map-marker-alt locationIcon"></i>
                     <input type="search" name="city" value="Paris, Belleville" placeholder="votre ville">
                 </span>
-            </section>
-             <!--Section Profile-->
+            </div>
+            <!--Section Profile-->
             <div class="info">
-                    <h2 class="info__title">Réservez le menu qui vous convient</h2>
-                    <p class="info__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                    <button class="buttonCommand"> Explorer nos restaurants</button>
+                <h2 class="info__title">Réservez le menu qui vous convient</h2>
+                <p class="info__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                <button class="buttonCommand"> Explorer nos restaurants</button>
             </div>
             <!--Section Actions-->
             <section class="action">
@@ -62,7 +60,7 @@
             </section>
             <!--Section Restaurant-->
             <section class="restaurants">
-                <div class="container"></div>
+                <div class="container">
                     <h2 class="restaurants__title">Restaurants</h2>
                     <article class="courses">
                         <a class="course" href="page1.html">
@@ -73,8 +71,8 @@
                                     <h3 class="course__title">La palette du goût</h3>
                                     <span class="course__subtitle">Ménilmontant</span>
                                 </div>
-                                <span class="heartIcon">
-                                    <i class="fa-2x fa-heart far" aria-hidden="true"></i>
+                                <span>
+                                    <i class="course--heart fa-heart far" aria-hidden="true"></i>
                                 </span> 
                             </div> 
                         </a>
@@ -121,19 +119,20 @@
                 </div>
             </section>
         </main>
-    </body> 
-    <!--section footer-->
-    <footer>
-        <div class="footer">
-            <div class="footer__container">
-                <h3 class="footer__logo">ohmyfood</h3>
-                <div class="footer__items">
-                    <div class="footer__item footer__link"><a href="#"><i class="fas fa-utensils footer__icon"></i><span class="footer__text">Proposer un restaurant</span></a></div>
-                    <div class="footer__item footer__link"><a href="#"><i class="fas fa-hands-helping footer__icon"></i><span class="footer__text">Devenir partenaire</span></a></div>
-                    <div class="footer__item footer__link"><a href="#"><span class="footer__text">Mentions légales</span></a></div>
-                    <div class="footer__item footer__link"><a href="mailto:services@ohmyfood.fr"><span class="footer__text">Contact</span></a></div>
+        <!--section footer-->
+
+        <footer class="footers">
+            <div class="footers__container">
+                <h3 class="footers__logo">ohmyfood</h3>
+                <div class="footers__items">
+                    <div class="footers__item footers__link"><a href="#"><i class="fas fa-utensils footers__icon"></i><span class="footers__text">Proposer un restaurant</span></a></div>
+                    <div class="footers__item footers__link"><a href="#"><i class="fas fa-hands-helping footers__icon"></i><span class="footers__text">Devenir partenaire</span></a></div>
+                    <div class="footers__item footers__link"><a href="#"><span class="footers__text">Mentions légales</span></a></div>
+                    <div class="footers__item footers__link"><a href="mailto:services@ohmyfood.fr"><span class="footers__text">Contact</span></a></div>
                 </div>
             </div>
-        </div>
-    </footer>               
+        </footer> 
+    
+    </body>
+    
 </html>

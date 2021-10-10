@@ -14,12 +14,13 @@ html, body {
     left: 0;
     top: 0;
     background-color: rgb(247, 240, 240);
-    /* background-color: rgba(255, 255, 255, 0.90); */
     animation: loader .01s;
     animation-delay: 1.75s;
     animation-fill-mode: both;
     z-index: 10000;
-    @include flexCentre;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &__itemContainer {
         display: flex;
@@ -61,7 +62,9 @@ html, body {
     }
 }
 .header {
-    @include flexCentre;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     box-shadow: 0 0  0.5rem rgb(0, 0, 0, 0.25);
     z-index: 1000;
@@ -76,7 +79,9 @@ html, body {
 
 .location {
     height: 50px;
-    @include flexAround;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: $color-local;
     position: relative;
 }
@@ -92,7 +97,7 @@ input {
 }
 .info {
     padding: 2rem;
-    background-color: $color-body;
+    background-color: $color-page;
     text-align: center;
     padding-bottom: 4rem;
 
@@ -119,11 +124,11 @@ input {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-         }  
+        }  
        
     }
     &__step {
-        background-color: $color-body;
+        background-color: $color-page;
         border-radius: 1.5rem;
         padding: 1rem;
         margin: 1rem;
@@ -150,7 +155,9 @@ input {
         height: 1.5rem;
         width: 1.5rem;
         border-radius: 2rem;
-        @include flexCentre;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: white;
         margin-left: -1.5rem;
         
@@ -160,17 +167,16 @@ input {
         margin-right: 1rem;
         margin-left: 1rem;
         color: #7e7e7e;
-        &:hover {
-            color: $color-primary;
-        }
 
+        &:hover {
+        color: $color-primary;
+
+        }
     }
-    
-    
 }
 
 .restaurants {
-    background-color:$color-body;
+    background-color: $color-page;
     padding: 2rem 1rem 4rem 1rem;
     
 }
@@ -179,11 +185,13 @@ input {
     grid-template-columns: repeat(1,1fr);
     column-gap: 2rem;
     row-gap: 1.3rem;
+
     @include tablet {
         grid-template-columns: repeat(2,1fr); 
         
     }
 }
+
 .course {
     display: block;
     background-color: white;
@@ -191,7 +199,7 @@ input {
     position: relative;
     color: inherit; 
     
-    &__img {
+        &__img {
         height: 12rem;
         width: 100%;
         border: transparent solid 0px;
@@ -230,36 +238,33 @@ input {
     &__subtitle {
         margin: 0;
     }
-
 }
-.heartIcon {
 
-    fill: transparent; 
-    padding: 0;
-    cursor: pointer;
+.fa-heart {
+    float: right;
+    font-size: 25px;
+    /* padding: 40px 15px 0px 0px; */
     text-transform: none;
+    font-weight: lighter;
     color: black;
-
+    cursor: pointer;
     &:hover {
         font-weight: bolder;
-        background-color: linear-gradient (to top, $color-secondary, $color-primary);
+        background: linear-gradient(to top, $color-secondary, $color-primary); 
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: animbutton 2s forwards;
-        content:"";
-        opacity: 1;
         transition-property: all;
         transition-duration: 0.5s;
         transition-timing-function: ease;
-        transition-delay: 0s;  
-        background: linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
-    } 
+        transition-delay: 0s; 
 
+    }
 }
 
-.footer {
-    background-color: $footer-background;
+.footers {
+    background-color: $color-foot;
 
     &__container {
         display: flex;
@@ -308,11 +313,7 @@ input {
         & a :hover {
             color: white;
             background-color: transparent;
-            text-decoration: underline;
-           
+            text-decoration: underline; 
         }
-    }
-
-   
-    
+    }   
 }

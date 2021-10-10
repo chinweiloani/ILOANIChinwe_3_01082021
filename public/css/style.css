@@ -88,7 +88,6 @@ html, body {
   left: 0;
   top: 0;
   background-color: #f7f0f0;
-  /* background-color: rgba(255, 255, 255, 0.90); */
   animation: loader 0.01s;
   animation-delay: 1.75s;
   animation-fill-mode: both;
@@ -297,38 +296,37 @@ input {
   margin: 0;
 }
 
-.heartIcon {
-  fill: transparent;
-  padding: 0;
-  cursor: pointer;
+.fa-heart {
+  float: right;
+  font-size: 25px;
+  /* padding: 40px 15px 0px 0px; */
   text-transform: none;
+  font-weight: lighter;
   color: black;
+  cursor: pointer;
 }
-.heartIcon:hover {
+.fa-heart:hover {
   font-weight: bolder;
-  background-color: linear-gradient to top, #FF79DA, #9356DC;
+  background: linear-gradient(to top, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: animbutton 2s forwards;
-  content: "";
-  opacity: 1;
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: ease;
   transition-delay: 0s;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 
-.footer {
+.footers {
   background-color: #353535;
 }
-.footer__container {
+.footers__container {
   display: flex;
   flex-direction: column;
   padding: 1.5rem 1.5rem;
 }
-.footer__logo {
+.footers__logo {
   color: white;
   font-family: "shrikhand", "cursive";
   margin: 0;
@@ -336,36 +334,36 @@ input {
   margin-bottom: 1rem;
 }
 @media all and (min-width: 768px) {
-  .footer__logo {
+  .footers__logo {
     display: flex;
     justify-content: center;
   }
 }
-.footer__items {
+.footers__items {
   margin: 0;
   padding: 0;
 }
 @media all and (min-width: 768px) {
-  .footer__items {
+  .footers__items {
     display: flex;
     justify-content: space-between;
   }
 }
-.footer__item {
+.footers__item {
   margin-top: 0.5rem;
 }
-.footer__icon {
+.footers__icon {
   width: 1.2rem;
   margin-right: 0.5rem;
   color: white;
 }
-.footer__text {
+.footers__text {
   color: white;
 }
-.footer__link {
+.footers__link {
   color: white;
 }
-.footer__link a :hover {
+.footers__link a :hover {
   color: white;
   background-color: transparent;
   text-decoration: underline;
@@ -420,15 +418,6 @@ html, body {
   background-color: #f3f3f3;
   z-index: 1;
   position: relative;
-  /* &__btn:hover {
-
-       .menu__like {
-
-           &--noBg {
-               opacity: 0;
-           }
-       }
-   }  */
 }
 @media all and (min-width: 768px) {
   .menu {
@@ -444,43 +433,6 @@ html, body {
 }
 .menu__type {
   font-family: "shrikhand", "cursive";
-}
-.menu__btn {
-  height: 2rem;
-  width: 2rem;
-  position: relative;
-  display: flex;
-  background-color: transparent;
-  border: transparent 0px solid;
-  padding: 0;
-  cursor: pointer;
-  background-color: black;
-}
-.menu__btn:hover::before {
-  font-weight: bolder;
-  background-color: linear-gradient to top, #FF79DA, #9356DC;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animbutton 2s forwards;
-  content: "";
-  opacity: 1;
-  transition-property: all;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
-  transition-delay: 0s;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-.menu__like {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  transition-duration: 0.25s;
-  background-color: #f6F6f6;
-  mix-blend-mode: lighten;
 }
 
 .menuContents {
