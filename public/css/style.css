@@ -296,41 +296,28 @@ input {
 .course__subtitle {
   margin: 0;
 }
-.course__btn {
-  height: 2rem;
-  width: 2rem;
-  background-color: transparent;
-  border: transparent 0px solid;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
-  background-color: black;
-}
-.course__btn::before {
-  opacity: 0;
-  transition: 0.5s;
-  content: "";
-  background: linear-gradient(0deg #9356DC, #ff79da);
-}
-.course__btn__like {
-  background-color: white !important;
-}
 
-.menu__like {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  transition-duration: 0.25s;
-  background-color: #f6F6f6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  mix-blend-mode: lighten;
+.heartIcon {
+  fill: transparent;
+  padding: 0;
+  cursor: pointer;
+  text-transform: none;
+  color: black;
+}
+.heartIcon:hover {
+  font-weight: bolder;
+  background-color: linear-gradient to top, #FF79DA, #9356DC;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animbutton 2s forwards;
+  content: "";
+  opacity: 1;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 
 .footer {
@@ -433,6 +420,15 @@ html, body {
   background-color: #f3f3f3;
   z-index: 1;
   position: relative;
+  /* &__btn:hover {
+
+       .menu__like {
+
+           &--noBg {
+               opacity: 0;
+           }
+       }
+   }  */
 }
 @media all and (min-width: 768px) {
   .menu {
@@ -452,45 +448,39 @@ html, body {
 .menu__btn {
   height: 2rem;
   width: 2rem;
+  position: relative;
+  display: flex;
   background-color: transparent;
   border: transparent 0px solid;
   padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
-  position: relative;
   background-color: black;
 }
 .menu__btn:hover::before {
-  opacity: 1;
-}
-.menu__btn::before {
-  opacity: 0;
-  transition: 0.5s;
+  font-weight: bolder;
+  background-color: linear-gradient to top, #FF79DA, #9356DC;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animbutton 2s forwards;
   content: "";
+  opacity: 1;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 .menu__like {
-  /* position: absolute;
-  top: 0;
-  left: 0;
+  position: absolute;
   height: 100%;
-  width: 100%; */
-  /* transition-duration: .25s;
-  background-color: #f6F6f6; */
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  mix-blend-mode: lighten;  */
-}
-.menu__btn:hover .menu__like--noBg {
-  opacity: 0;
+  width: 100%;
+  transition-duration: 0.25s;
+  background-color: #f6F6f6;
+  mix-blend-mode: lighten;
 }
 
 .menuContents {
@@ -679,7 +669,7 @@ html, body {
   padding: 3rem 0;
 }
 
-.btnCommand {
+.Commander {
   cursor: pointer;
   padding: 1rem 2.5rem;
 }

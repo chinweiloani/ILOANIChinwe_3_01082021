@@ -230,59 +230,33 @@ input {
     &__subtitle {
         margin: 0;
     }
-    &__btn{
-        
-        height: 2rem;
-        width: 2rem;
-        background-color: transparent;
-        border: transparent 0px solid;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        position: relative;
-        background-color: black; 
-        &::before {
-            opacity: 0;
-            transition: .5s;
-            content: "";
-            background: linear-gradient(0deg #9356DC, #ff79da);
-        }
-
-    &__like {
-        
-        background-color: white !important;
-    }
-
-
-    }
-  
-}
-.menu__like {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        transition-duration: .25s;
-        background-color: #f6F6f6;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        mix-blend-mode: lighten; 
-        
 
 }
+.heartIcon {
 
+    fill: transparent; 
+    padding: 0;
+    cursor: pointer;
+    text-transform: none;
+    color: black;
 
+    &:hover {
+        font-weight: bolder;
+        background-color: linear-gradient (to top, $color-secondary, $color-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animbutton 2s forwards;
+        content:"";
+        opacity: 1;
+        transition-property: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+        transition-delay: 0s;  
+        background: linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+    } 
 
-
-
-
-
-
-
+}
 
 .footer {
     background-color: $footer-background;
