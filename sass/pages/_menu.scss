@@ -61,46 +61,69 @@ html, body {
         font-family: "shrikhand", "cursive";
         
     }
+
     &__btn {
         height: 2rem;
         width: 2rem;
-        /* background-color: transparent; */
-        /* border: transparent 0px; */
+        background-color: transparent;
+        border: transparent 0px solid;
         padding: 0;
-        /* @include flexCentre; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
-        text-transform: none;
-        color: $color-primary;
+        position: relative;
+        background-color: black;
+        
 
-       /*  &:hover::before {
+        &:hover::before {
+            
             opacity: 1;
-        } */
+        } 
 
-        &:hover {
-            font-weight: bolder;
-            background-color: linear-gradient (to top, $color-secondary, $color-primary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: animbutton 2s forwards;
-            /*content:"";
+        &::before {
             opacity: 0;
-            transition-property: all;
-            transition-duration: 0.5s;
-            transition-timing-function: ease;
-            transition-delay: 0s; 
+            transition: 0.5s;
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
             height: 100%;
-            width: 100%;
-            background: linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);*/
+            width: 100%; 
+            background: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
+            
         } 
+        
 
     }
 
+    &__like {
+        /* position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%; */
+        /* transition-duration: .25s;
+        background-color: #f6F6f6; */
+        /* display: flex;
+        align-items: center;
+        justify-content: center;
+        mix-blend-mode: lighten;  */
+        
+    }
+   &__btn:hover {
 
+        .menu__like {
+            
+            &--noBg {
+                opacity: 0;
+            }
+        }
+    } 
+   
+   
 }
+
 .menuContents {
     display: grid;
     grid-template-columns: repeat(1,1fr);

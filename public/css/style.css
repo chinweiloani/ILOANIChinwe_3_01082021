@@ -49,7 +49,7 @@ a {
   text-decoration: none;
 }
 
-button {
+.buttonCommand {
   border: none;
   padding: 0.9rem 1.5rem;
   font-weight: 400;
@@ -62,7 +62,7 @@ button {
   transition-duration: 0.25s;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
-button:hover {
+.buttonCommand:hover {
   background: linear-gradient(to top left, #9356DC 10%, #FF79DA);
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.1);
 }
@@ -296,27 +296,41 @@ input {
 .course__subtitle {
   margin: 0;
 }
-
-.fa-heart {
-  /* height: 2rem;
-  width: 2rem; */
-  text-transform: none;
-  font-weight: normal;
-  /* background-color: transparent; */
-  /* border: transparent 0px; */
+.course__btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
   padding: 0;
-  /* @include flexCentre; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  color: black;
-  font-size: 25px;
+  position: relative;
+  background-color: black;
 }
-.fa-heart:hover {
-  font-weight: bolder;
-  background: linear-gradient to top, #FF79DA, #9356DC;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animbutton 2s forwards;
+.course__btn::before {
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  background: linear-gradient(0deg #9356DC, #ff79da);
+}
+.course__btn__like {
+  background-color: white !important;
+}
+
+.menu__like {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition-duration: 0.25s;
+  background-color: #f6F6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
 }
 
 .footer {
@@ -438,36 +452,45 @@ html, body {
 .menu__btn {
   height: 2rem;
   width: 2rem;
-  /* background-color: transparent; */
-  /* border: transparent 0px; */
+  background-color: transparent;
+  border: transparent 0px solid;
   padding: 0;
-  /* @include flexCentre; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  text-transform: none;
-  color: #9356DC;
-  /*  &:hover::before {
-       opacity: 1;
-   } */
+  position: relative;
+  background-color: black;
 }
-.menu__btn:hover {
-  font-weight: bolder;
-  background-color: linear-gradient to top, #FF79DA, #9356DC;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animbutton 2s forwards;
-  /*content:"";
+.menu__btn:hover::before {
+  opacity: 1;
+}
+.menu__btn::before {
   opacity: 0;
-  transition-property: all;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
-  transition-delay: 0s; 
+  transition: 0.5s;
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);*/
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+.menu__like {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; */
+  /* transition-duration: .25s;
+  background-color: #f6F6f6; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;  */
+}
+.menu__btn:hover .menu__like--noBg {
+  opacity: 0;
 }
 
 .menuContents {
