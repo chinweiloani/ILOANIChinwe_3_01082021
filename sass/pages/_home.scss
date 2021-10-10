@@ -294,9 +294,22 @@ input {
         }
         
     }
+    
     &__item {
         margin-top: 0.5rem;
+        
     }
+
+    &--link {
+        color: white;
+        
+        & a :hover {
+            color: white;
+            background-color: transparent;
+            text-decoration: underline; 
+        }
+    }   
+
     &__icon {
         width: 1.2rem;
         margin-right: 0.5rem;
@@ -306,14 +319,5 @@ input {
     &__text {
         color: white;
     }
-
-    &__link {
-        color: white;
-        
-        & a :hover {
-            color: white;
-            background-color: transparent;
-            text-decoration: underline; 
-        }
-    }   
+    
 }

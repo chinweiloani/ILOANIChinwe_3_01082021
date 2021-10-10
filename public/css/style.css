@@ -352,6 +352,14 @@ input {
 .footers__item {
   margin-top: 0.5rem;
 }
+.footers--link {
+  color: white;
+}
+.footers--link a :hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
 .footers__icon {
   width: 1.2rem;
   margin-right: 0.5rem;
@@ -359,14 +367,6 @@ input {
 }
 .footers__text {
   color: white;
-}
-.footers__link {
-  color: white;
-}
-.footers__link a :hover {
-  color: white;
-  background-color: transparent;
-  text-decoration: underline;
 }
 
 html, body {
