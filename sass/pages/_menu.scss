@@ -1,11 +1,14 @@
+// general ===========
 html, body {
     max-width: 100%;
     max-height: 100vh;
     margin: 0;
     font-family: "Roboto", sans-serif;
     scroll-behavior: smooth;
- 
+
 }
+
+// section Header ==========
 .header {
     display: flex;
     justify-content: center;
@@ -35,6 +38,7 @@ html, body {
     }
     
 }
+// menu image =========
 .menuImg {
     max-width: 100%;
     max-height: 32rem;
@@ -42,7 +46,7 @@ html, body {
     object-fit: cover;
    
 }
-
+// présentation du contenu de la page============
 .menu {
     margin-top: -4rem;
     border-radius: 2rem 2rem 0 0;
@@ -61,12 +65,13 @@ html, body {
         justify-content: space-between;
         
     }
+
     &__type {
         font-family: "shrikhand", "cursive";
         
     } 
 }
-
+// contient tout le contenu du menu de la page================
 .menuContents {
     display: grid;
     grid-template-columns: repeat(1,1fr);
@@ -74,6 +79,7 @@ html, body {
     grid-template-columns: repeat(3, 1fr);
     }   
 }
+// menu types (entrée, plats, désserts)=========
 .menuContent {
     max-width: 100%;
     overflow: hidden;
@@ -98,6 +104,7 @@ html, body {
     }
 
 }
+// boîte qui contient toutes les informations sur les menus======
 .menuBox {
     background-color: white;
     padding: 1rem;
@@ -139,7 +146,7 @@ html, body {
     padding-left: 0.5rem;
     }
 
-    &__confirmation {
+    &__confirmation {   //coche qui glisse de droite à gauche=========
     background-color: $color-tertiary;
     margin: -1rem -5rem -1rem 1rem;
     width: 4rem;
@@ -157,7 +164,7 @@ html, body {
         color: $color-tertiary;
     }
 
-   &__iconwrap {
+   &__iconwrap {  // icône qui tourne=====
     height: 1.6rem;
     width: 1.6rem;
     background-color: white;
@@ -174,7 +181,7 @@ html, body {
    }
    
 }
-
+// animations de menus===========
 .delay-0 {
    @include boxAnime; 
     animation-delay: .0s;
@@ -224,7 +231,7 @@ html, body {
     @include boxAnime;
     animation-delay: .9s;
 }
-    
+  //  menu command button=======
 .btnwrap {
     display: flex;
     justify-content: center;
