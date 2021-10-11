@@ -387,7 +387,7 @@ html, body {
   width: 170px;
   padding-top: 1rem;
 }
-.header__leftArrow {
+.header--leftArrow {
   position: relative;
 }
 .header__arrow {
@@ -427,8 +427,8 @@ html, body {
 .menu__head {
   padding: 1rem 2rem 0 1rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 .menu__type {
   font-family: "shrikhand", "cursive";

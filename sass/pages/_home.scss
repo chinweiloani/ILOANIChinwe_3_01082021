@@ -19,9 +19,7 @@ html, body {
     animation-delay: 1.75s;
     animation-fill-mode: both;
     z-index: 10000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCentre;    
 
     &--1 {
         background-color: $color-primary;
@@ -62,9 +60,7 @@ html, body {
 }
 // header section=========
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCentre;
     position: relative;
     box-shadow: 0 0 0.5rem rgb(0, 0, 0, 0.25);
     z-index: 1000;
@@ -79,9 +75,7 @@ html, body {
 // recherche de localisation=====
 .location {
     height: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flexAround;
     background-color: $color-local;
     position: relative;
 }
@@ -155,9 +149,7 @@ input {
         height: 1.5rem;
         width: 1.5rem;
         border-radius: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCentre;
         color: white;
         margin-left: -1.5rem;
         

@@ -10,9 +10,7 @@ html, body {
 
 // section Header ==========
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCentre;
     position: relative;
 
     &__logo {
@@ -20,7 +18,7 @@ html, body {
     width: 170px;
     padding-top: 1rem;
     }
-    &__leftArrow {
+    &--leftArrow {
         position: relative;
     }
     &__arrow {
@@ -29,10 +27,8 @@ html, body {
     height: 2rem;
     width: 2rem;
     top: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(-50%);
+    @include flexCentre;
+    transform: translateY(-50%); 
     font-size: 1.2rem;
     color: black;
     }
@@ -60,9 +56,7 @@ html, body {
      
     &__head {
         padding: 1rem 2rem 0 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flexBetween;
         
     }
 
@@ -79,7 +73,7 @@ html, body {
     grid-template-columns: repeat(3, 1fr);
     }   
 }
-// menu types (entrée, plats, désserts)=========
+// types de menu (entrée, plats, désserts)=========
 .menuContent {
     max-width: 100%;
     overflow: hidden;
@@ -91,7 +85,7 @@ html, body {
     padding-bottom: 0.5rem;
     font-weight: normal;
 
-        &::after {
+        &::after {    // ligne sous le types de menu=====
             content: "";
             width: 3rem;
             height: 0.25rem;
@@ -150,9 +144,7 @@ html, body {
     background-color: $color-tertiary;
     margin: -1rem -5rem -1rem 1rem;
     width: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCentre;
     transition-duration: 0.5s;
     }
 
@@ -168,19 +160,17 @@ html, body {
     height: 1.6rem;
     width: 1.6rem;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCentre;
     border-radius: 2rem;
     transform: rotate(360deg);
     transition-duration: 0.6s;
-    
    }
    &:hover &__iconwrap {
     transform: rotate(0);
    }
    
 }
+
 // animations de menus===========
 .delay-0 {
    @include boxAnime; 
@@ -243,7 +233,5 @@ html, body {
     cursor: pointer; 
     padding: 1rem 2.5rem;
     
-    
-
 }
 
