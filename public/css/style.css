@@ -297,9 +297,7 @@ input {
 }
 
 .fa-heart {
-  /* float: right; */
   font-size: 25px;
-  /* text-transform: none; */
   font-weight: lighter;
   color: black;
   cursor: pointer;
