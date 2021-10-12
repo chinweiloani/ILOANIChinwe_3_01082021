@@ -190,7 +190,7 @@ input {
     background-color: white;
     border-radius: 1rem;
     position: relative;
-    color: inherit; 
+    color: inherit;
     
         &__img {
         height: 12rem;
@@ -220,7 +220,7 @@ input {
     }
 
     &__content {
-        flex: 1;
+        flex: 1; 
     }
 
     &__title {
@@ -234,9 +234,9 @@ input {
 }
 
 .fa-heart {   // menu-like button ==========
-    float: right;
+    /* float: right; */
     font-size: 25px;
-    text-transform: none;
+    /* text-transform: none; */
     font-weight: lighter;
     color: black;
     cursor: pointer;
@@ -246,7 +246,7 @@ input {
         background: linear-gradient(to top, $color-secondary, $color-primary); 
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent; 
         animation: animbutton 2s forwards;
         transition-property: all;
         transition-duration: 0.5s;
