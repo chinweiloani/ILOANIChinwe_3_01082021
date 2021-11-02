@@ -3,11 +3,7 @@
 
 $font-txt: "roboto", sans-serif;
 
-h1 {
-    font-family: "shrikhand", cursive;
-    font-weight: normal;
-}
-h2, h3, h4, h5, p, li, a {
+h2, h3, h4, h5, p, a {
     font-family: $font-txt;
 }
 
